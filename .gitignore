@@ -1,0 +1,20 @@
+# --- PYTHON / DJANGO ---
+venv/
+.env
+__pycache__/
+*.py[cod]
+db.sqlite3
+media/
+static_collected/
+.vscode/
+
+# --- REACT / NODE ---
+node_modules/
+dist/
+build/
+.eslintcache
+*.log
+
+# --- SISTEMA ---
+.DS_Store
+Thumbs.db

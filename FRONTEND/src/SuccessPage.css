@@ -1,0 +1,45 @@
+
+.blink {
+  animation: blinker 1s linear infinite;
+  color: var(--neon-pink);
+  font-size: 10px;
+  font-family: 'Press Start 2P';
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.success-container {
+  background: var(--bg-light) !important;
+}
+
+.success-glass {
+  background: white !important;
+  border: 2px solid var(--color-primary) !important;
+  color: var(--text-dark);
+}
+
+.glitch-text {
+  font-family: 'Playfair Display' !important;
+  color: var(--color-primary) !important;
+  text-shadow: none !important;
+}
+
+/* SuccessPage.css - Ajuste final */
+.wa-alert {
+  margin: 30px 0;
+  padding: 15px;
+  border: 1px solid var(--color-accent); /* Color Queso */
+  background: #FFFDE7;
+  color: #5D4037; /* Marrón café */
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.success-icon svg {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 4px 10px rgba(211, 47, 47, 0.2)); /* Sombra roja suave */
+}

@@ -1,0 +1,205 @@
+/* src/Landing.css */
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-scrollable {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px 100px 24px;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.glitch {
+  font-family: 'Playfair Display' !important;
+  font-weight: 900 !important;
+  text-shadow: none !important;
+  color: var(--text-dark);
+  letter-spacing: -1px;
+  animation: none !important;
+}
+
+.hero-subtitle {
+  font-family: 'Inter' !important;
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* --- GRILLA DE PRODUCTOS --- */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* --- LA TARJETA --- */
+.gamer-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gamer-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(211, 47, 47, 0.15);
+}
+
+/* --- AJUSTE DE IMAGEN --- */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #F4F1ED;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gamer-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+/* --- ETIQUETAS Y TEXTOS --- */
+.price-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.current-price {
+  background: var(--color-accent) !important;
+  color: #FFFFFF !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 900 !important;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+}
+
+.discount-badge {
+  background: var(--color-primary) !important;
+  border-radius: 4px;
+  color: white;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+.gamer-card h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+  font-size: 1.4rem !important;
+  padding: 10px 20px 0 20px !important;
+  margin: 10px 0 5px 0;
+}
+
+.company {
+  color: var(--color-primary) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0 20px;
+}
+
+.buy-button {
+  background: var(--color-primary) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-family: 'Inter' !important;
+  font-weight: 700;
+  font-size: 11px !important;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  margin: 15px 20px;
+  transition: 0.2s;
+}
+
+.buy-button:hover {
+  background: #B71C1C !important;
+  transform: scale(1.02);
+}
+
+.filter-btn:hover {
+  background: #3E2723 !important;
+  color: #F4F1ED !important;
+}
+
+.loading-text {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-top: 100px;
+  color: var(--color-primary);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 600px) {
+  .content-wrapper {
+    padding: 0 12px 60px 12px;
+  }
+
+  .glitch { 
+    font-size: 2.2rem !important; 
+  }
+
+  .items-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .gamer-card {
+    width: 100%;
+    max-width: 320px; /* Tarjeta centrada de ancho fijo impecable */
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    height: 220px;
+  }
+}
